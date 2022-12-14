@@ -19,7 +19,18 @@
         <main>
             <div class="input container-fluid d-flex justify-content-center mb-5">
                 <input v-model="userToDo" placeholder="Things To Do.." class="w-25 me-3">
+                <button class="btn btn-outline-primary btn-group-sm" @click="addNewTask">Add</button>
             </div>
+            <div class="list-wrapper container-fluid d-flex justify-content-center">
+                <ul class="list-group w-50">
+                    <li v-for="(element, indexOf) in toDoList" class="list-group-item d-flex justify-content-between py-4" :class="(element.done == true) ? 'text-decoration-line-through' : '' ">
+                        {{ element.name }}
+                        <span class="text-decoration-none" @click="removeItem(indexOf)">&#9932;</span>
+                    </li>
+                </ul>    
+            </div>    
+
+
         </main>
     </div>
     
@@ -27,5 +38,4 @@
 
 <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 <script src="./js/script.js"></script>
-
 </html>
