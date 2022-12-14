@@ -1,7 +1,17 @@
+body{
+    background-color: aqua;
+    background-image: url(https://wallpaperaccess.com/full/5692485.png);
+}
 #app{
-    background-color: rgb(17, 165, 223);
     height: 100vh;
 }
 span{
     cursor: pointer;
+}
+
+.text-color{
+    
+    font-size: 5rem;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
